@@ -1,0 +1,123 @@
+body{
+    margin:0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;/*horizontal alignment */
+    height: 100vh;
+    position: relative;
+ text-shadow: 2px 2px 4px black;
+    justify-content: center;/*vertical alignment*/
+    background: url("https://media.gq.com/photos/5b637298649a373331a32228/master/w_1600,c_limit/Dana-scruggs-fitness-GQ3227-W-GIF4.gif");
+    background-repeat: no-repeat;
+    width:100%;
+    color: rgb(255, 255, 255);
+    letter-spacing: 4px;
+    background-size: cover;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
+    
+}
+.container h1{
+    margin-bottom: 330px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+h4{
+    font-size: 20px; 
+}
+.btn{                                                                                                                
+    padding: 10px 10px;               
+    background: red;       
+    border-radius: 5px;                                                   
+    border-color:red;      
+    color: white;                                                
+    box-shadow: 0 4px 8px rgba(0,0,0,.3);
+    position: relative; 
+    margin: none;
+    margin-bottom: 10px;
+    overflow: hidden;
+}                                                                        
+                     
+.btn span{              
+    position: relative;                     
+    z-index: 1;              
+    font-size: 20px;  
+        
+}             
+.btn:hover{                 
+       cursor: pointer;  
+       color: red;
+       border-color: white;
+       font-weight: bold;
+}                 
+.btn::before{    
+    content: "";           
+    position: absolute;            
+    background-color: white;
+    width: 0px; 
+    height: 1px; 
+    left: var(--xPos);
+    top:var(--yPos);                                   
+    transform: translate(-50%,-50%);
+    border-radius: 40%;                       
+    transition: width .5s, height .5s ;
+   
+}                             
+.btn:hover::before{
+    width: 300px;                  
+    height:300px;
+}                                                                                                                                                                     
+   
+.active.container{
+    filter: blur(5px) brightness(.7);
+}            
+.popup-container{
+    position: fixed;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 400px;
+    color: white;
+   background-repeat: no-repeat;
+   background-size: cover;
+    height: 250px;
+    top:30%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px black 0.3;
+    display: flex;
+    background-image: url("https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/workouts/bicepworkouts.jpg?itok=clgOPXSn");
+    flex-direction: column;
+    padding: 20px;
+}
+  
+.popup-btn{
+    background-color: orangered;
+    font-size: 20px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+.input{
+    margin:5px;
+   text-align: center;
+   font-size: 20px;
+   margin-bottom: 30px;
+    padding: 7px;
+}    
+.input::placeholder{
+    color: rgb(179, 178, 178);
+}                                                     
+.close-icon{
+    position:absolute;
+    right: 20px;
+    cursor: pointer;
+}
+.close-icon:hover{
+    color: orangered;
+}
+.active.popup-container{
+    visibility: hidden;
+}
